@@ -1,7 +1,7 @@
-name: Template
+name: UnoCore
 version: ${version}
-main: me.unoprojects.template.DefaultPluginTemplate
+main: me.unoprojects.unocore.DefaultUnoCore
 api-version: '1.21'
 
 author: UnoProjects
-description: Plugin template
+description: UnoCore plugin

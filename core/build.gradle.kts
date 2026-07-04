@@ -30,7 +30,7 @@ tasks {
     }
 
     shadowJar {
-        archiveBaseName.set("Template")
+        archiveBaseName.set("UnoCore")
         archiveClassifier.set("")
     }
 }

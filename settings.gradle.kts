@@ -1,4 +1,4 @@
-rootProject.name = "PluginTemplate"
+rootProject.name = "UnoCore"
 
 include("api")
 include("core")

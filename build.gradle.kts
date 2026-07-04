@@ -3,7 +3,7 @@ plugins {
 }
 
 allprojects {
-    group = "me.unoprojects.template"
+    group = "me.unoprojects.unocore"
     version = "1.0.0"
 
     repositories {
