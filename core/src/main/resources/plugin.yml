@@ -1,0 +1,7 @@
+name: Template
+version: ${version}
+main: me.unoprojects.template.DefaultPluginTemplate
+api-version: '1.21'
+
+author: UnoProjects
+description: Plugin template
