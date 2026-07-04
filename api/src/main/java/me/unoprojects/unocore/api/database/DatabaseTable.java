@@ -1,6 +1,5 @@
 package me.unoprojects.unocore.api.database;
 
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.intellij.lang.annotations.Language;
 
@@ -12,12 +11,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Supplier;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public abstract class DatabaseTable<T extends JavaPlugin> {
 
     private static final ExecutorService DATABASE_EXECUTOR = Executors.newFixedThreadPool(5);
-    private static final Logger BUKKIT_LOGGER = Bukkit.getLogger();
 
     protected final ConnectionProvider provider;
     protected final T plugin;
@@ -49,7 +46,7 @@ public abstract class DatabaseTable<T extends JavaPlugin> {
     }
 
     public void logError(Exception throwable, String message) {
-        BUKKIT_LOGGER.log(Level.SEVERE, throwable, () -> message);
+        plugin.getLogger().log(Level.SEVERE, message, throwable);
     }
 
     protected Connection getConnection() throws SQLException {

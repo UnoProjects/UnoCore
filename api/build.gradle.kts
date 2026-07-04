@@ -1,5 +1,6 @@
 plugins {
     `java-library`
+    `maven-publish`
 }
 
 dependencies {
@@ -10,3 +11,15 @@ dependencies {
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+            groupId = "me.unoprojects.unocore"
+            artifactId = "api"
+            version = project.version.toString()
+        }
+    }
+}
+
