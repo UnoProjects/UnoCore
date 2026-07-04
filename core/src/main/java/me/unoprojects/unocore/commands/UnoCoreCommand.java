@@ -33,12 +33,12 @@ public class UnoCoreCommand extends CommandSupplier {
                         )
                         .executes((sender, args) -> {
                     sender.sendMessage(empty());
-                    sender.sendMessage(parse(" <gradient:#FA982A:#FFC57A:#FA982A>ᴜɴᴏ ᴄᴏʀᴇ</gradient> <dark_gray>- <gray>ᴄᴏᴍᴍᴀɴᴅ ʜᴇʟᴘ"));
+                    sender.sendMessage(parse(" <gradient:#FA982A:#FFC57A:#FA982A><b>ᴜɴᴏ ᴄᴏʀᴇ</b></gradient> <dark_gray>- <gray>ɢᴜɪᴅᴀ ᴄᴏᴍᴀɴᴅɪ"));
                     sender.sendMessage(empty());
-                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore list"));
-                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore enable <module>"));
-                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore disable <module>"));
-                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore reload <module>"));
+                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore list <dark_gray>- <gray>Mostra la lista dei moduli"));
+                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore enable <modulo> <dark_gray>- <gray>Abilita un modulo"));
+                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore disable <modulo> <dark_gray>- <gray>Disabilita un modulo"));
+                    sender.sendMessage(parse(" <dark_gray>» <white>/unocore reload <modulo> <dark_gray>- <gray>Ricarica un modulo"));
                     sender.sendMessage(empty());
                 })
         };

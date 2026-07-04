@@ -33,6 +33,8 @@ public class DefaultUnoCore extends UnoCore {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+
         this.moduleManager = new BaseModuleManager();
         this.serviceRegistry = new BaseServiceRegistry();
         this.playerDataManager = new BasePlayerDataManager();

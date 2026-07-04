@@ -5,14 +5,17 @@ import dev.jorel.commandapi.arguments.StringArgument;
 import me.unoprojects.unocore.api.UnoCore;
 import me.unoprojects.unocore.api.commands.SubCommand;
 import me.unoprojects.unocore.api.modules.UnoPlugin;
-import me.unoprojects.unocore.api.utils.ColorUtils;
 import org.bukkit.Bukkit;
 
 import me.unoprojects.unocore.api.permissions.Permission;
 
+import static me.unoprojects.unocore.api.utils.ColorUtils.parse;
+
 import java.util.Optional;
 
 public class ReloadSubCommand extends SubCommand<UnoCore> {
+
+    private static final String PREFIX = " <gradient:#FA982A:#FFC57A><b>UnoCore</b></gradient> <dark_gray>» <gray>";
 
     public ReloadSubCommand(UnoCore plugin) {
         super(plugin, "reload");
@@ -30,7 +33,7 @@ public class ReloadSubCommand extends SubCommand<UnoCore> {
             String moduleName = (String) args.get("module");
             Optional<UnoPlugin> moduleOpt = plugin.getModuleManager().getModule(moduleName);
             if (moduleOpt.isEmpty()) {
-                sender.sendMessage(ColorUtils.parse("<red>Module '" + moduleName + "' not found."));
+                sender.sendMessage(parse(PREFIX + "<red>Il modulo <yellow><b>" + moduleName + "</b></yellow> non è stato trovato."));
                 return;
             }
 
@@ -40,7 +43,7 @@ public class ReloadSubCommand extends SubCommand<UnoCore> {
             }
 
             Bukkit.getPluginManager().enablePlugin(module);
-            sender.sendMessage(ColorUtils.parse("<green>Module '" + moduleName + "' has been reloaded."));
+            sender.sendMessage(parse(PREFIX + "Il modulo <yellow><b>" + moduleName + "</b></yellow> è stato <green>ricaricato</green> con successo."));
         });
     }
 }
