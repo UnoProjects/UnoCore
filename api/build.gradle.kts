@@ -4,6 +4,7 @@ plugins {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    compileOnly("dev.jorel:commandapi-paper-core:11.2.0")
 }
 
 java {

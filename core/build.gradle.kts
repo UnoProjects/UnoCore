@@ -7,6 +7,9 @@ dependencies {
     implementation(project(":api"))
 
     compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    compileOnly("dev.jorel:commandapi-paper-core:11.2.0")
+
+    implementation("com.zaxxer:HikariCP:7.1.0")
 }
 
 java {
@@ -31,6 +34,7 @@ tasks {
 
     shadowJar {
         archiveBaseName.set("UnoCore")
+        relocate("com.zaxxer.hikari", "me.unoprojects.unocore.libs.hikari")
         archiveClassifier.set("")
     }
 }
